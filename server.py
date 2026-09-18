@@ -67,12 +67,12 @@ def iniciar_server():
     conexion = None
     server_socket = None
 
-    print("El servidor está activo y en espera de clientes...")
 
     try:
         # Inicialización de recursos
         conexion = inicializar_db()
         server_socket = inicializar_socket()
+        print("El servidor está activo y en espera de clientes...")
 
         # Bucle principal para aceptar conexiones entrantes
         while True:
