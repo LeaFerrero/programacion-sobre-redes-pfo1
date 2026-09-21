@@ -63,7 +63,7 @@ def inicializar_socket(host="localhost", port=5000):
     return server_socket
 
 
-def iniciar_server():
+def iniciar_server(host="localhost", port=5000):
     conexion = None
     server_socket = None
 
@@ -71,7 +71,7 @@ def iniciar_server():
     try:
         # Inicialización de recursos
         conexion = inicializar_db()
-        server_socket = inicializar_socket()
+        server_socket = inicializar_socket(host, port)
         print("El servidor está activo y en espera de clientes...")
 
         # Bucle principal para aceptar conexiones entrantes
